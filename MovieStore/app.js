@@ -109,17 +109,6 @@ app.post('/check_login', function (request,response){
 
 });
 
-
-app.get('/find', function (request, response){
-
-   var doc=  db.collection("products").find();
-   if(doc)
-   { 
-       return response.redirect('found.html');
-   }
-   else return response.redirect("home.html");
- })
-
   
 app.get('/login', function (request, response){
     return response.redirect('login.html');
